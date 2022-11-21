@@ -82,6 +82,7 @@ function calculateTip(tip, bill){
     console.log(tipTotal)
 }
 
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
