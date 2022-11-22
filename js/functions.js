@@ -9,9 +9,19 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
+// let helloMessage;
+// function sayHello(name){
+//    helloMessage = 'Hello, ' + name + '!'
+// }
+
+// const sayHello = (name) => {
+//    let message = "Hello, " + name + "!";
+//    return message;
+// }
+
 let helloMessage;
-function sayHello(name){
-    helloMessage = 'Hello, ' + name + '!'
+const sayHello = (name) => {
+    helloMessage = `Hello, ${name}!`;
 }
 
 /**
@@ -22,7 +32,7 @@ function sayHello(name){
  * console.log 'helloMessage' to check your work
  */
 
-sayHello('Rob');
+sayHello('Rob')
 console.log(helloMessage);
 
 /**
@@ -68,7 +78,7 @@ function isTwo(num) {
 }
 
 isTwo(random);
-console.log('Random number: ' + randomNum)
+console.log(`Random number: ${randomNum}`)
 console.log(answer);
 
 /**
@@ -99,7 +109,7 @@ function calculateTip(tip, bill){
 let bill = prompt('Bill total: ');
 let tip = prompt('Tip percentage (decimal form): ')
 calculateTip(tip, bill);
-alert('Tip total: $' + tipTotal);
+alert(`Tip total: $${tipTotal}`);
 
 /**
  * TODO:
@@ -123,10 +133,10 @@ let answer1;
 function applyDiscount(price, discount){
     discountTotal = price * discount;
     total = price - discountTotal;
-    answer1 = 'Total price: ' + price + ', Discount percentage: ' + discount
+    answer1 = `Total price: ${price}, Discount percentage: ${discount}`
 
 }
 
 applyDiscount(100, .25);
 console.log(answer1);
-console.log('Total after discount: ' + total);
+console.log(`Total after discount: ${total}`);
