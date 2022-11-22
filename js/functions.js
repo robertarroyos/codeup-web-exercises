@@ -22,7 +22,7 @@ function sayHello(name){
  * console.log 'helloMessage' to check your work
  */
 
-sayHello('Robert');
+sayHello('Rob');
 console.log(helloMessage);
 
 /**
@@ -57,13 +57,19 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-function isTwo(num){
-    console.log('Random number: ' + num)
-    let num2 = num % 2 == 0
-    console.log(num2)
+
+let randomNum;
+let answer;
+
+function isTwo(num) {
+    randomNum = num;
+    answer = num ===2;
+
 }
 
 isTwo(random);
+console.log('Random number: ' + randomNum)
+console.log(answer);
 
 /**
  * TODO:
@@ -77,11 +83,11 @@ isTwo(random);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+let tipTotal;
 function calculateTip(tip, bill){
-    let tipTotal = tip * bill
+    tipTotal = tip * bill
     console.log(tipTotal)
 }
-
 
 /**
  * TODO:
@@ -93,6 +99,7 @@ function calculateTip(tip, bill){
 let bill = prompt('Bill total: ');
 let tip = prompt('Tip percentage (decimal form): ')
 calculateTip(tip, bill);
+alert('Tip total: $' + tipTotal);
 
 /**
  * TODO:
@@ -108,11 +115,18 @@ calculateTip(tip, bill);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+let discountTotal;
+let total;
+let answer1;
+
 function applyDiscount(price, discount){
-    console.log('Total price: ' + price + ', Discount percentage: ' + discount)
-    let discountTotal = price * discount
-    let total = price - discountTotal
-    console.log('Total after discount: ' + total)
+    discountTotal = price * discount;
+    total = price - discountTotal;
+    answer1 = 'Total price: ' + price + ', Discount percentage: ' + discount
 
 }
+
 applyDiscount(100, .25);
+console.log(answer1);
+console.log('Total after discount: ' + total);
