@@ -19,9 +19,9 @@
 //    return message;
 // }
 
-let helloMessage;
-const sayHello = (name) => {
-    helloMessage = `Hello, ${name}!`;
+// let helloMessage;
+// const sayHello = (name) => {
+//     helloMessage = `Hello, ${name}!`;
 }
 
 /**
@@ -32,8 +32,8 @@ const sayHello = (name) => {
  * console.log 'helloMessage' to check your work
  */
 
-sayHello('Rob')
-console.log(helloMessage);
+// sayHello('Rob')
+// console.log(helloMessage);
 
 /**
  * TODO:
@@ -42,13 +42,13 @@ console.log(helloMessage);
  * console.
  */
 
-let myName = 'Robert';
-sayHello(myName);
-console.log(helloMessage);
+// let myName = 'Robert';
+// sayHello(myName);
+// console.log(helloMessage);
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+// var random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -68,18 +68,18 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
-let randomNum;
-let answer;
-
-function isTwo(num) {
-    randomNum = num;
-    answer = num ===2;
-
-}
-
-isTwo(random);
-console.log(`Random number: ${randomNum}`)
-console.log(answer);
+// let randomNum;
+// let answer;
+//
+// function isTwo(num) {
+//     randomNum = num;
+//     answer = num ===2;
+//
+// }
+//
+// isTwo(random);
+// console.log(`Random number: ${randomNum}`)
+// console.log(answer);
 
 /**
  * TODO:
@@ -93,10 +93,10 @@ console.log(answer);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-let tipTotal;
-function calculateTip(tip, bill){
-    tipTotal = tip * bill
-    console.log(tipTotal)
+// let tipTotal;
+// function calculateTip(tip, bill){
+//     tipTotal = tip * bill
+//     console.log(tipTotal)
 }
 
 /**
@@ -106,10 +106,10 @@ function calculateTip(tip, bill){
  * then display the dollar amount they should tip
  */
 
-let bill = prompt('Bill total: ');
-let tip = prompt('Tip percentage (decimal form): ')
-calculateTip(tip, bill);
-alert(`Tip total: $${tipTotal}`);
+// let bill = prompt('Bill total: ');
+// let tip = prompt('Tip percentage (decimal form): ')
+// calculateTip(tip, bill);
+// alert(`Tip total: $${tipTotal}`);
 
 /**
  * TODO:
@@ -126,17 +126,18 @@ alert(`Tip total: $${tipTotal}`);
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
-let discountTotal;
-let total;
-let answer1;
+// let discountTotal;
+// let total;
+// let answer1;
+//
+// function applyDiscount(price, discount){
+//     discountTotal = price * discount;
+//     total = price - discountTotal;
+//     answer1 = `Total price: ${price}, Discount percentage: ${discount}`
+//
+// }
+//
+// applyDiscount(100, .25);
+// console.log(answer1);
+// console.log(`Total after discount: ${total}`);
 
-function applyDiscount(price, discount){
-    discountTotal = price * discount;
-    total = price - discountTotal;
-    answer1 = `Total price: ${price}, Discount percentage: ${discount}`
-
-}
-
-applyDiscount(100, .25);
-console.log(answer1);
-console.log(`Total after discount: ${total}`);

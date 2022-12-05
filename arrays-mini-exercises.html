@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+<body>
+<script>
+  // 1. Create an array of three of your classmates.
+  // 2. Practice console logging each classmate separately.
+  // 3. Reassign the second element to be the string "Justin".
+
+  const classMates = ['Andre', 'Luke', 'Chase'];
+  // console.log(classMates[0]);
+  // classMates[1] = 'Justin';
+  // console.log(classMates);
+
+  //1. Loop through your classmates array with a for loop.
+  //2. Loop through your classmates array with a forEach loop.
+  //
+  // for (i = 0; i < classMates.length; i++){
+  //     console.log(classMates[i]);
+  // }
+  //
+  // classMates.forEach(function(classmate){
+  //     console.log(classmate);
+  // })
+
+// Arrow function
+//   classMates.forEach((classmate) => {
+//       console.log(classmate);
+//   })
+
+  // let fruits = ['apple', 'banana', 'orange', 'apple', 'pineapple'];
+  //
+  // function allIndexesOf(arr, element){
+  // fruits.forEach(function(fruite) {
+  //     if ()
+  //         }
+  // })
+
+  // 1. Create an array the string elements 'April', 'May', 'June'
+  // 2. Add 'July' in the correct place of the array
+  // 3. Add 'March' in the correct place of the array
+  // 4. July is too hot; remove it from the array.
+  //     Console log the result and verify you get ['March', 'April', 'May', 'June']
+  //
+  let months = ['April', 'May', 'June'];
+  // months.push('July');
+  // months.unshift('March');
+  // months.pop();
+  // console.log(months);
+
+  // function indexOfAll(months){
+  //     let monthsIndex = [];
+  //     for (let i = 0; i < months.length; i++){
+  //         let index = months.indexOf(months[i]);
+  //         monthsIndex.push(index);
+  //     }
+  //     return monthsIndex;
+  // }
+  // console.log(indexOfAll(months));
+
+  // const names = "Bob,Sally,Mary";
+  // const namesArr = names.split(',')
+  // console.log(namesArr);
+
+  // ============================= !! MINI-EXERCISE 2 !!
+
+  /*
+      1. Put the first names of everyone in your row in the order they are sitting (just your half of the classroom)
+      2. Log the alphabetical order of everyone in your row
+      3. Log the reverse alphabetical order of everyone in your row
+      4. Log everyone in the row in reverse order
+      5. Log an array of just the first two students in the row (left to right)
+      6. Log everyone in the row in a single string separated by spaces
+      7. Log everyone in the row in a single string separated by underscores
+   */
+
+  // let studentRow = ['Luke', 'Robert', 'Kenneth'];
+  // let stuAlphaOrder = studentRow.slice().sort();
+  // let stuReverseAlpha = studentRow.slice().sort().reverse();
+  // let stuReverseOrder = studentRow.slice().reverse();
+  // let stuFirstTwo = studentRow.slice(0, 2);
+  // let studentRowString = studentRow.slice().join(' ');
+  // let studentRowString2 = studentRow.slice().join('_');
+  //
+  // console.log(studentRow);
+  // console.log(stuAlphaOrder);
+  // console.log(stuReverseAlpha);
+  // console.log(stuReverseOrder);
+  // console.log(stuFirstTwo);
+  // console.log(studentRowString);
+  // console.log(studentRowString2);
+
+</script>
+</body>
+</html>

@@ -219,3 +219,22 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 // else{
 //     alert('Your number is odd.')
 // }
+
+// Locate ingredients (Pantry)
+    // Peanut Butter, Jelly, Bread
+// Locate utensils (drawer)
+    // Butter knife
+    // Spoon
+    // Plate
+// Locate flat surface
+
+// Layout all items on a flat surface
+// Remove from package
+// Determine with or w/o crust
+    // w/o remove crust
+// Lay bread down on plate
+
+// Open peanut butter and jelly jars
+// Mix peanut butter with spoon (creamy)
+// Use spoon to scoop peanut butter from jar
+// Spread peanut butter
