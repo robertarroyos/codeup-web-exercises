@@ -43,12 +43,12 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
-    //
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
     // let resultArr = [];
     // shoppers.forEach(function (shopper){
     //     if (shopper.amount > 200){
@@ -109,11 +109,13 @@
      *      ---
      *      ...
      */
-//     books.forEach(function(book){
-//         console.log(`Book #${(books.indexOf(book)) + 1}
-// Title: ${book.title}
-// Author: ${book.author.firstName} ${book.author.lastName}`)
-//     })
+    books.forEach(function(book){
+        console.log(`Book #${(books.indexOf(book)) + 1}
+Title: ${book.title}
+Author: ${book.author.firstName} ${book.author.lastName}
+---`)
+    })
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -124,28 +126,28 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-    let moreBooks = [];
-    function createBook(title, author){
-        let book = {title: title, author: author};
-        moreBooks.push(book);
-    }
-    let bookInfo;
-    function showBookInfo(input){
-
-        moreBooks.forEach(function(book){
-
-            if (input === book){
-                bookInfo = `Title: ${moreBooks.book.title}, Author: ${book.author}`;
-                return bookInfo;
-            }
-
-        });
-        console.log(bookInfo);
-    }
-
-     createBook('Too Legit', 'Robert Arroyos');
-    createBook('Super Legit', 'Robert Arroyos');
-    console.log(moreBooks);
-    showBookInfo('Too Legit');
+    // let moreBooks = [];
+    // function createBook(title, author){
+    //     let book = {title: title, author: author};
+    //     moreBooks.push(book);
+    // }
+    // let bookInfo;
+    // function showBookInfo(input){
+    //
+    //     moreBooks.forEach(function(book){
+    //
+    //         if (input === book){
+    //             bookInfo = `Title: ${moreBooks.book.title}, Author: ${book.author}`;
+    //             return bookInfo;
+    //         }
+    //
+    //     });
+    //     console.log(bookInfo);
+    // }
+    //
+    //  createBook('Too Legit', 'Robert Arroyos');
+    // createBook('Super Legit', 'Robert Arroyos');
+    // console.log(moreBooks);
+    // showBookInfo('Too Legit');
 
 })();
