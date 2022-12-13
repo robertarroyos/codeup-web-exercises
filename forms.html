@@ -1,10 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <title>HTML Forms</title>
 </head>
 <body>
+<h1>Register With Us</h1>
+<hr>
+<form method="POSt" action="https://request-inspector.glitch.me/">
 
+  <div>
+  <label for="email">Email:</label>
+  <input id="email" type="text" name="email" placeholder="Enter email here">
+  <label for="password">Password:</label>
+  <input id="password" type="password" name="password" placeholder="Enter password here"></label>
+  </div>
+
+<br>
+
+  <div>
+    <label for="bio">Bio:</label><br>
+    <textarea id="bio" name="bio" placeholder="Enter bio here"></textarea>
+  </div>
+
+<br>
+<hr>
+
+  <div>
+    <h2>How did you hear about us?</h2>
+  </div>
+    <div>
+    <label for="Billboard">
+    <input id="Billboard" name="Question1a" type="radio" value="Billboard" >Billboard
+    </label>
+  </div>
+    <div>
+    <label for="Radio">
+      <input id="Radio" name="Question1b" type="radio" value="Radio" >Radio
+    </label>
+  </div>
+    <div>
+    <label for="Internet">
+      <input id="Internet" name="Question1c" type="radio" value="Internet" >Internet
+    </label>
+  </div>
+    <div>
+    <label for="Other">
+      <input id="Other" name="Question1d" type="radio" value="Other" >Other
+    </label>
+  </div>
+  <br>
+  <hr>
+  <div>
+    <label for="browser">What browser are you using?</label><br>
+    <select id=browser namme="What browser are you using?">
+      <option value="Chrome">Google Chrome</option>
+      <option value="Firefox">Firefox</option>
+      <option value="Safari">Safari</option>
+    </select>
+  </div>
+  <br>
+  <div>
+  <label for="submit">Submit Form</label>
+  <button id="submit" type="submit">Submit</button>
+  </div>
+</form>
 </body>
 </html>
