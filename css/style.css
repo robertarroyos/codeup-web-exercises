@@ -1,0 +1,46 @@
+h1 {
+    text-align: center;
+    color: purple;
+    text-decoration: underline;
+}
+
+h2 {
+    color: darkslateblue;
+    text-decoration: underline;
+}
+
+body {
+
+    font-family: AppleGothic;
+    /*background-color: lightgrey;*/
+    background-image: url("https://images.unsplash.com/photo-1509023464722-18d996393ca8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ul {
+    list-style-type: square;
+}
+
+table {
+    border: 2px solid #ddd;
+    height: 150px;
+    width: 510px;
+    text-align: center;
+    color: lightgrey;
+    border-collapse: collapse;
+    opacity: 100%;
+}
+
+th {
+    background-color: lightgrey;
+    color: black;
+}
+th, td {
+    border: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: gray;
+    opacity: 50%;
+}

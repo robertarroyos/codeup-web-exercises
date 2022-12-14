@@ -1,0 +1,52 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+.message {
+    height: 30px;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    margin: 10px;
+    padding-top: .5em;
+    padding-left: .5em;
+    opacity: 1;
+}
+
+/*.message:hover {*/
+/*    !*transform: scale(101%);*!*/
+/*    text-shadow: 2px 4px 5px slategray;*/
+/*    text-indent: 3px;*/
+/*    font-size: 105%;*/
+/*    filter: brightness(104%);*/
+/*    border: 1px solid gray;*/
+/*    transition: .25s;*/
+/*}*/
+
+/*.message:not(:hover){*/
+/*    transition: .25s;*/
+/*}*/
+
+.message.message-info {
+    background: rgb(200, 224, 253);
+    color: rgb(62, 73, 156);
+}
+
+.message.message-success {
+    background: rgb(203, 242, 219);
+    color: rgb(0, 121, 74);
+}
+
+.message.message-warning {
+    background: rgb(255, 249, 205);
+    color: rgb(138, 110, 29);
+}
+
+.message.message-error {
+    background: rgb(255, 211, 216);
+    color: rgb(129, 10, 39);
+}
