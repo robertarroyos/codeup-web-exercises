@@ -105,14 +105,12 @@ a {
 .media-body { /* --- RA --- */
     float: left;
     width: calc(100% - 50px); /* --- RA --- */
-
 }
 
 .profile-details { /* --- RA --- */
     float: left;
     width: 15%; /* --- RA --- */
     margin: 0 .5em; /* --- RA --- */
-
 }
 
 .timeline { /* --- RA --- */
