@@ -75,32 +75,48 @@
 // }
 //
 // console.log(returnPetWithNoFish(pets))
+//
+// const pets = [
+//     {
+//         name: 'Sparky',
+//         type: 'Fish',
+//         age: 4
+//     },
+//     {
+//         name: 'Mr. Pig',
+//         type: 'Cat',
+//         age: 4
+//     },
+//     {
+//         name: 'Bubba',
+//         type: 'Dog',
+//         age: 5
+//     },
+//     {
+//         name: 'Beans',
+//         type: 'Dog',
+//         age: 3
+//     },
+//     {
+//         name: 'Mr. Salmon',
+//         type: 'Fish',
+//         age: 1
+//     }
+// ];
 
-const pets = [
-    {
-        name: 'Sparky',
-        type: 'Fish',
-        age: 4
-    },
-    {
-        name: 'Mr. Pig',
-        type: 'Cat',
-        age: 4
-    },
-    {
-        name: 'Bubba',
-        type: 'Dog',
-        age: 5
-    },
-    {
-        name: 'Beans',
-        type: 'Dog',
-        age: 3
-    },
-    {
-        name: 'Mr. Salmon',
-        type: 'Fish',
-        age: 1
-    }
-];
-
+// function returnLastTwoChars(input){
+//     return input.slice(-2);
+// }
+//
+// function returnLastCharsReversed(string, number){
+//     let lastChars = string.slice(-(number));
+//     return lastChars.split('').reverse().join('');
+// }
+//
+// function filterList(arr){
+//     let newArr = [];
+//     arr.forEach(function (item){
+//         let newArr = (typeof item !== 'string') ? newArr.push(item) : false;
+//     })
+//     return newArr;
+// }
