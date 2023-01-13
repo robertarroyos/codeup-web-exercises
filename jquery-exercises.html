@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery Lesson</title>
+</head>
+<body>
+
+<h1 id="title" class="codeup">Hi, there! Welcome to JQuery lesson.</h1>
+<h2 id="my-intro" class="codeup1">I'm Robert and I'll be your guide.</h2>
+<p id="table-header" class="codeup">Here are some items we'll review:</p>
+<ul id="table-items" class="codeup">
+    <li>Intro to JQ</li>
+    <li>How-to</li>
+    <li>Conclusion</li>
+</ul>
+
+<script src="./js/jquery-3.6.3.js"></script>
+
+<script>
+    $('li').css('font-size', '20px');
+    $('h1, p, li').css('background', '#FF0')
+    let alertNew = $('#title').html();
+    alert(alertNew);
+</script>
+
+</body>
+</html>
