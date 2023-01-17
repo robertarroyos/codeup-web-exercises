@@ -1,0 +1,53 @@
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-title, .nesController {
+    justify-content: center;
+}
+
+.header-text {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+
+#nesController {
+    position: relative;
+    z-index: 1;
+}
+
+.nesController {
+    position: absolute;
+    z-index: 2;
+}
+
+#arrowUp, #arrowRight, #arrowDown, #arrowLeft {
+    position: relative;
+    z-index: 3;
+    width: 30px;
+    height: 30px;
+}
+
+#arrowUp {
+    left: -427px;
+    top: 83px;
+
+}
+
+#arrowDown {
+    left: -487px;
+    top: 140px;
+}
+
+#arrowLeft {
+    left: -485px;
+    top: 111px;
+}
+
+#arrowRight {
+    left: -488px;
+    top: 111px;
+}
+

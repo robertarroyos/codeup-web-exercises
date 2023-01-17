@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Konami Code</title>
+  <link rel="stylesheet" href="css/konami_stylesheet.css">
+</head>
+<body>
+
+<main class="container">
+
+  <section class="page-wrapper">
+
+    <section class="container">
+      <div class="row header-title">
+        <p class="header-text">Konami Code</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="row nesController">
+        <img id="nesController" src="./images/nes_controller.png">
+        <span id="arrowUp"></span>
+        <span id="arrowRight"></span>
+        <span id="arrowDown"></span>
+        <span id="arrowLeft"></span>
+        <span id="select"></span>
+        <span id="start"></span>
+        <span id="b"></span>
+        <span id="a"></span>
+      </div>
+    </section>
+
+
+  </section>
+</main>
+
+
+
+<script src="./js/jquery-3.6.3.js"></script>
+<script>
+  "use strict";
+
+  $(document).keyup(function(event){
+    console.log(event.keyCode);
+  });
+
+  let konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+  let keyArray = [];
+  $(document).keyup(function(event) {
+    let keyValue = event.keyCode;
+    keyArray.push(event.keyCode);
+    if (keyValue === 13) {
+      if (konami.toString() !== keyArray.toString()) {
+        alert('WRONG');
+        keyArray = [];
+      } else
+        alert('You have added 30 lives!');
+        keyArray = [];
+    }
+    console.log(keyArray);
+  })
+
+</script>
+</body>
+</html>

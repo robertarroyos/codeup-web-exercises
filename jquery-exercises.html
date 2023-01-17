@@ -3,18 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>JQuery Lesson</title>
+    <link rel="stylesheet" href="./css/jq_stylesheet.css">
 </head>
 <body>
 
-<h1 id="title" class="codeup">Hi, there! Welcome to JQuery lesson.</h1>
-<h2 id="my-intro" class="codeup1">I'm Robert and I'll be your guide.</h2>
-<p id="table-header" class="codeup">Here are some items we'll review:</p>
-<ul id="table-items" class="codeup">
-    <li>Intro to JQ</li>
-    <li>How-to</li>
-    <li>Conclusion</li>
-</ul>
+<main class="container">
 
+
+    <div class="page-wrapper">
+
+        <section class="container">
+            <div class="column">
+                <div class="row title-name">
+                    Robert Arroyos
+                </div>
+                <div class="row lesson-name">
+                    JQuery Lesson
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="row button-row">
+                <div class="column">
+                    <button id="headerBtn">Highlight header</button>
+                </div>
+                <div class="column">
+                    <button id="titleBtn">Enlarge table header font</button>
+                </div>
+                <div class="column">
+                    <button id="resetBtn">Reset page</button>
+                </div>
+            </div>
+        </section>
+
+            <h1 id="title" class="codeup">Hi, there! Welcome to JQuery lesson.</h1>
+            <h2 id="my-intro" class="codeup1">I'm Robert and I'll be your guide.</h2>
+            <p id="table-header" class="codeup">Here are some items we'll review:</p>
+            <ul id="table-items" class="codeup">
+                <li>Intro to JQ</li>
+                <li>How-to</li>
+                <li>Conclusion</li>
+            </ul>
+    </div>
+</main>
 <script src="./js/jquery-3.6.3.js"></script>
 
 <script>
@@ -41,6 +73,22 @@
             $(this).css('color', '');
         }
     )
+
+    $('#headerBtn').click(
+        function() {
+            $('h1').css('background', 'yellow');
+        });
+
+    $('#titleBtn').click(
+        function() {
+            $('p').css('font-size', '18px');
+        });
+
+    $('#resetBtn').click(
+        function() {
+            $('h1').css('background', '')
+            $('p').css('font-size', '')
+        })
 
 </script>
 
