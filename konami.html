@@ -50,15 +50,10 @@
     let keyValue = event.keyCode;
     keyArray.push(event.keyCode);
     if (keyValue === 13) {
-      if (konami.toString() !== keyArray.toString()) {
-        alert('WRONG');
-        keyArray = [];
-      } else
-        alert('You have added 30 lives!');
-        keyArray = [];
+      let result = (konami.toString() !== keyArray.toString()) ? alert('DUMMY!') : alert('You have added 30 lives!');
+      keyArray = [];
     }
-    console.log(keyArray);
-  })
+  });
 
 </script>
 </body>

@@ -12,6 +12,10 @@
     font-weight: bolder;
 }
 
+.nesController {
+    display: flex;
+    flex-direction: column;
+}
 
 #nesController {
     position: relative;
