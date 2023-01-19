@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Store</title>
+
+  <style>
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content: center;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      box-shadow: 5px 5px 5px gray;
+      border: 1px solid gray;
+      width: 600px;
+      height: auto;
+    }
+
+    #products {
+      margin-bottom: 20px;
+    }
+
+    #refreshBtn {
+      margin-bottom: 20px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+<section class="container "> <!-- Body content -->
+
+  <div class="column">
+
+      <div class="row header-text">
+        <h1>Rob's Tool Store</h1>
+      </div>
+    <div class="row">
+      <table id="products">
+        <thead>
+        <tr>
+          <th>Title</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Categories</th>
+        </tr>
+        </thead>
+        <tbody id="insertProducts"></tbody>
+      </table>
+    </div>
+    <div class="row">
+      <button id="refreshBtn">Refresh</button>
+    </div>
+
+  </div>
+
+</section> <!-- Body contenty -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+
+<script>
+  (function() {
+    "use strict";
+    // TODO: Create an AJAX GET request for the file under data/inventory.json
+
+    // let jqXhr = $.ajax("./data/inventory.json");
+
+    // TODO: Take the data from inventory.json and append it to the products table
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    //       HINT: You will want to target #insertProducts for your new HTML elements
+
+    function tableData(data) {
+    let html = '';
+    for (let i = 0; i < data.length; i++) {
+      html += `<tr><td>${data[i].title}</td>
+      <td>${data[i].quantity}</td>
+      <td>${data[i].price}</td>
+      <td>${data[i].categories}</td></tr>`
+      }
+    $('#insertProducts').html(html);
+    }
+
+    $.ajax("./data/inventory.json").done(function(data) {
+      tableData(data);
+  });
+
+    $('#refreshBtn').on('click', function (){
+      $.ajax("./data/inventory.json").done(function(data) {
+        tableData(data);
+      });
+    })
+
+  })();
+</script>
+
+</body>
+</html>
