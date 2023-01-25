@@ -1,0 +1,9 @@
+.header-image {
+    display: flex;
+    flex-direction: row;
+    background-image: url("/images/background-image.jpeg");
+    height: 346px;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}

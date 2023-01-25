@@ -1,0 +1,17 @@
+[
+  {
+    "place": "Jazz San Antonio",
+    "address": "312 Pearl Pkwy Building 6, San Antonio, TX 78215",
+    "locationImage": "./images/jazzSA.jpeg"
+  },
+  {
+    "place": "El Tequila",
+    "address": "10910 Marback Rd #101, San Antonio, TX 78245",
+    "locationImage": "./images/eltequila.jpeg"
+  },
+  {
+    "place": "Japanese Tea Garden",
+    "address": "3853 N St Mary's, San Antonio, TX 78121",
+    "locationImage": "./images/teagarden.jpeg"
+  }
+]

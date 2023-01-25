@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Map</title>
+  <!-- css file -->
+  <link rel="stylesheet" href="css/weather-map-practice.css">
+</head>
+<body>
+
+<div class="container-fluid">
+
+  <section class="container-fluid">
+    <div class="row headerBox">
+      <div class="column headerText">Good Days and Great Days!</div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div id="snapShotBox" class="row">
+      <div class="column snapShot">
+        <div class="row snapShotText snapShotDate"></div>
+        <div class="row snapShotText snapShotTemp"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div id="searchInput" class="row">
+      <form class="row">
+          <label for="cityInput">Search City:</label>
+          <input id="cityInput" type="text" placeholder="Search">
+          <input id="searchBtn" type="submit" value="submit">
+      </form>
+    </div>
+  </section>
+
+  <section class="container">
+    <div id="cityName" class="row">
+      <div id="cityHeader" class="column"></div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div id="fiveDayForecast" class="row">
+        <div class="column fiveDayForecast">
+          <div class="row forecastText forecastDate"></div>
+          <div class="row forecastText forecastTempHumidity">
+            <div class="column forecastText forecastTemp"></div>
+            <div class="column forecastText forecastHumidity"></div>
+          </div>
+          <div class="row forecastClouds">${forecastData[i].weather[0].description}</div>
+        </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div id="map"></div>
+  </section>
+
+</div>
+
+
+<!---------------------- END OF HTML CODE ---------------------->
+
+
+<!-- KEYS -->
+<script src="js/keys.js"></script>
+
+<!-- Mapbox JS -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+
+<!-- Mapbox Geocoder Util Methods -->
+<script src="./js/mapbox-geocoder-utils.js"></script>
+
+<!-- JQuery -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<!-- JS -->
+<script src="js/weather-map-practice.js"></script>
+
+<!-- Custom Map JS -->
+<script>
+
+  mapboxgl.accessToken = keys.mapbox;
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    zoom: 10,
+    center: [-98.4916, 29.4252]
+  });
+
+  // the  geocode method from mapbox-geocoder-utils.js
+  geocode("600 Navarro St #350, San Antonio, TX 78205", keys.mapbox).then(function(result) {
+    console.log(result);
+    map.setCenter(result);
+    map.setZoom(17);
+  });
+
+</script>
+</body>
+</html>

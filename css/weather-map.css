@@ -1,0 +1,121 @@
+body {
+    background-color: #000000;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/images/weathermap-header.jpeg");
+    background-size: cover;
+    background-position: center center;
+    height: 150px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.header-text {
+    color: whitesmoke;
+    font-size: 50px;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.snapWeather {
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    background-color: #484848;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.snapText {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.dateToday {
+    padding-left: 10px;
+}
+
+.currentTemp {
+    padding-right: 10px;
+}
+
+.fiveDaySnap {
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-top: 5px;
+    background-color: #333333;
+    border-radius: 5px;
+}
+
+.daySnap {
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+
+    text-transform: capitalize;
+    color: whitesmoke;
+    margin: 2px;
+    width: auto;
+    height: 30px;
+    border: black;
+}
+
+.searchBar {
+    height: 50px;
+    width: 100%;
+    margin: 10px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchInput {
+    height: 30px;
+    width: 200px;
+    font-size: 18px;
+}
+
+#searchBtn {
+    height: 35px;
+    width: 100px;
+    margin-left: 10px;
+}
+
+.fiveDayDetail {
+
+}
+
+.dayDetail {
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    flex-grow: 1;
+    height: 300px;
+    width: auto;
+    margin: 0 5px;
+    background-color: #333333;
+    border-radius: 5px;;
+}
+
+.clouds {
+    text-transform: capitalize;
+}

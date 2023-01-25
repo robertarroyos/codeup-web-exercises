@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX Blog Exercise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&display=swap" rel="stylesheet">
+
+  <style>
+
+      .row {
+          display: flex;
+          flex-direction: row;
+      }
+
+      .column {
+          display: flex;
+          flex-direction: column;
+      }
+
+      .row-header {
+          height: 150px;
+          background-image: url("./images/blogger-header.jpeg");
+          /*background-repeat: no-repeat;*/
+          background-size: 35%;
+          background-position: center center;
+          box-shadow: 5px 5px 5px gray;
+          border: 1px solid whitesmoke;
+          margin: 20px;
+          justify-content: space-between;
+      }
+
+      .header-title {
+          font-family: 'Bodoni Moda', serif;
+          color: whitesmoke;
+          font-size: 70px;
+          text-align: center;
+          justify-content: center;
+      }
+
+      .row-content {
+          flex-grow: 2;
+      }
+
+      #blog-box {
+          width: 500px;
+      }
+
+  </style>
+
+</head>
+<body>
+
+<div class="page-wrapper">
+
+  <section class="container"> <!-- header section -->
+    <div class="row row-header">
+<!--      <img id="header-image" src="images/blogger-header.jpeg">-->
+      <div class="column header-icon">
+
+      </div>
+      <div class="column header-title">
+        You bloggin' blogger!
+      </div>
+      <div class="column">
+        <button id="refreshBtn">Refresh</button>
+      </div>
+    </div>
+  </section>
+
+    <section class="container">
+
+        <div class="row row-content">
+
+            <div id="blog-box" class="column">
+                <div class="row">
+                    <div id="blog-title" class="column"></div>
+                    <div id="blog-date" class="column"></div>
+                </div>
+                <div id="blog-content" class="row"></div>
+                <div id="blog-category" class="row"></div>
+            </div>
+
+            <div id="page-conent" class="column">
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+        "use strict";
+
+    function blogPost(blog) {
+    let html = '';
+    for (let i = 0; i < blog.length; i++) {
+        html += `<div class="row">
+                    <div id="blog-title" class="column">${blog[i].title}</div>
+                    <div id="blog-date" class="column">${blog[i].date}</div>
+                 </div>
+                 <div id="blog-content" class="row">${blog[i].content}</div>
+                 <div id="blog-category" class="row">${blog[i].categories.join(', ')}</div>`
+    }
+    $('#blog-box').html(html);
+    }
+
+    function updatePage() {
+    $.get('./data/blog.json').done(function (blog) {
+        let blogHTML = blogPost(blog);
+        $('.blog-box').html(blogHTML);
+    })
+    }
+
+    updatePage();
+
+    $('#refreshBtn').on('click', function () {
+        updatePage();
+    })
+    })
+
+</script>
+
+</body>
+</html>
