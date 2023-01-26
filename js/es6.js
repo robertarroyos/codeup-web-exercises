@@ -51,12 +51,12 @@ let emails = [];
 let names = [];
 
 // TODO: rewrite the following using arrow functions
-users.forEach(function(user) {
-    return emails.push(user.email);
-});
-users.forEach(function(user) {
-    return names.push(user.name);
-});
+// users.forEach(function(user) {
+//     return emails.push(user.email);
+// });
+// users.forEach(function(user) {
+//     return names.push(user.name);
+// });
 
 users.forEach((user) => emails.push(user.email));
 users.forEach((user) => names.push(user.name));
@@ -67,14 +67,15 @@ users.forEach(function(user) {
     // TODO: rewrite the code below to use object destructuring assignment
     //       note that you can also use destructuring assignment in the function
     //       parameter definition
-    const user = {name: user.name, email: user.email, languages: user.languages};
+    const {name, email, languages} = user;
     // const name = user.name;
     // const email = user.email;
     // const languages = user.languages;
     // TODO: rewrite the assignment below to use template strings
-    developers.push(`${name}'s email is ${email + name} knows ${languages.join(', ')}`);
+    developers.push(`${name}'s email is ${email} ${name} knows ${languages.join(', ')}`);
     // developers.push(name + '\'s email is ' + email + name + ' knows ' + languages.join(', '));
 });
+console.log(developers)
 
 // TODO: Use `let` for the following variable
 let list = '<ul>';
@@ -82,9 +83,9 @@ let list = '<ul>';
 // TODO: rewrite the following loop to use a for..of loop
 // developers.forEach(function (developer) {
     for (let developer of developers) {
-
+        List += `<li>${developer}</li>`
     // TODO: rewrite the assignment below to use template strings
-        List += `<li> ${developer} </li>`
+
     // list += '<li>' + developer + '</li>';
 }
 

@@ -36,7 +36,7 @@ $(document).ready(function () {
             text +=
                 `<div class="column snapShot">
                     <div class="row snapShotText snapShotDate">${forecastData[i].dt_txt}</div>
-                       <div class="row snapShotText snapShotTemp">Temp: ${forecastData[i].main.temp}</div>
+                       <div class="row snapShotText snapShotTemp">Temp: ${forecastData[i].main.temp}${'&#176;'}</div>
                 </div>`
             $('#snapShotBox').html(text);
         }
@@ -48,7 +48,7 @@ $(document).ready(function () {
                 `<div class="column fiveDayForecast">
                     <div class="row forecastText forecastDate">${forecastData[i].dt_txt}</div>
                     <div class="row forecastText forecastTempHumidity">
-                        <div class="column forecastText forecastTemp">${forecastData[i].main.temp}</div>
+                        <div class="column forecastText forecastTemp">${forecastData[i].main.temp}${'&#176;'}</div>
                         <div class="column forecastText forecastHumidity">${forecastData[i].main.humidity}</div>
                     </div>
                     <div class="row forecastClouds">${forecastData[i].weather[0].description}</div>
@@ -97,7 +97,7 @@ $(document).ready(function () {
                 text +=
                     `<div class="column snapShot">
                     <div class="row snapShotText snapShotDate">${forecastData[i].dt_txt}</div>
-                       <div class="row snapShotText snapShotTemp">Temp: ${forecastData[i].main.temp}</div>
+                       <div class="row snapShotText snapShotTemp">${forecastData[i].main.temp}${'&#176;'}</div>
                 </div>`
                 $('#snapShotBox').html(text);
             }
@@ -109,7 +109,7 @@ $(document).ready(function () {
                     `<div class="column fiveDayForecast">
                     <div class="row forecastText forecastDate">${forecastData[i].dt_txt}</div>
                     <div class="row forecastText forecastTempHumidity">
-                        <div class="column forecastText forecastTemp">${forecastData[i].main.temp}</div>
+                        <div class="column forecastText forecastTemp">${forecastData[i].main.temp}${'&#176;'}</div>
                         <div class="column forecastText forecastHumidity">${forecastData[i].main.humidity}</div>
                     </div>
                     <div class="row forecastClouds">${forecastData[i].weather[0].description}</div>
