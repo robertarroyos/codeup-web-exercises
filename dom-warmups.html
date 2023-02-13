@@ -21,9 +21,13 @@
 <script>
 
     'use strict';
+    //
+    // $('#button').on('click', function () {
+    //     $('body').css('background-color', 'red');
+    // })
 
-    $('#button').on('click', function () {
-        $('body').css('background-color', 'red');
+    document.querySelector('#button').addEventListener('click', function (){
+        document.querySelector('body').style.background = 'red';
     })
 
 </script>

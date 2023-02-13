@@ -315,25 +315,25 @@
 
 // Make a function, reverseStrings, that takes in an array of objects and reverses the value of the 'str' properties.
 
-
-    let strs = [
-    {
-        id: 1,
-        str: 'hello'
-    },
-    {
-        id: 2,
-        str: 'world'
-    },
-    {
-        id: 3,
-        str: 'codeup'
-    },
-    {
-        id: 4,
-        str: 'x'
-    }
-]
+//
+//     let strs = [
+//     {
+//         id: 1,
+//         str: 'hello'
+//     },
+//     {
+//         id: 2,
+//         str: 'world'
+//     },
+//     {
+//         id: 3,
+//         str: 'codeup'
+//     },
+//     {
+//         id: 4,
+//         str: 'x'
+//     }
+// ]
 
 // reverseStrings(strs) // returns...
 
@@ -365,3 +365,15 @@
 // }
 //
 // console.log(reverseStrings(strs));
+//
+// if (true) {
+//     let x = 5;
+// }
+// console.log(typeof x);
+
+// function sayHello(name) {
+//     return 'Hello, ' + name + '!';
+// }
+
+let numbers = [1, 2, 3, 4, 5];
+numbers.map(n => n * 3)
